@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Personal Finance Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+<h1>💰 Personal Finance Dashboard</h1>
+
+<div class="form">
+
+<input type="text" id="title" placeholder="Transaction Title">
+
+<input type="number" id="amount" placeholder="Amount">
+
+<select id="type">
+<option value="Income">Income</option>
+<option value="Expense">Expense</option>
+</select>
+
+<select id="category">
+<option>Food</option>
+<option>Travel</option>
+<option>Shopping</option>
+<option>Bills</option>
+<option>Salary</option>
+<option>Others</option>
+</select>
+
+<button onclick="addTransaction()">Add Transaction</button>
+
+</div>
+
+<div class="summary">
+
+<div class="card">
+<h2>Total Income</h2>
+<h3 id="income">₹0</h3>
+</div>
+
+<div class="card">
+<h2>Total Expense</h2>
+<h3 id="expense">₹0</h3>
+</div>
+
+<div class="card">
+<h2>Savings</h2>
+<h3 id="saving">₹0</h3>
+</div>
+
+</div>
+
+<h2>Search Transaction</h2>
+
+<input type="text" id="search" placeholder="Search..." onkeyup="searchTransaction()">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Title</th>
+<th>Amount</th>
+<th>Type</th>
+<th>Category</th>
+
+</tr>
+
+</thead>
+
+<tbody id="tableData">
+
+</tbody>
+
+</table>
+
+<canvas id="chart"></canvas>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
